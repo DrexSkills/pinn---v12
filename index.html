@@ -67,13 +67,23 @@
       letter-spacing: -.01em;
     }
     .btn {
-      display: inline-flex; align-items: center;
+      display: inline-flex; align-items: center; gap: 8px;
       background: var(--text); color: #fff;
       font-size: 14px; font-weight: 500; letter-spacing: -.01em;
       padding: 12px 26px; border-radius: 100px;
       text-decoration: none; transition: opacity .15s;
     }
     .btn:hover { opacity: .8; }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #fff; color: var(--text);
+      font-size: 14px; font-weight: 500; letter-spacing: -.01em;
+      padding: 12px 26px; border-radius: 100px;
+      text-decoration: none; border: 1px solid var(--border);
+      transition: border-color .15s;
+    }
+    .btn-outline:hover { border-color: #9ca3af; }
+    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
 
     /* DIVIDER */
     .divider { width: 1px; height: 80px; background: var(--border); margin: 80px auto 0; }
@@ -154,7 +164,13 @@
   <p class="eyebrow">Free · macOS & Windows</p>
   <h1>AI that stays<br><em>out of sight.</em></h1>
   <p class="sub">Runs silently in the background. Press a shortcut, get an answer, disappear. No dock. No trace.</p>
-  <a href="#docs" class="btn">Read the docs</a>
+  <div class="btn-row">
+    <a href="dist/Pinn-Setup-Windows-x64.exe" download class="btn">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download for Windows
+    </a>
+    <a href="#docs" class="btn-outline">Read the docs</a>
+  </div>
 </section>
 
 <section id="docs">
